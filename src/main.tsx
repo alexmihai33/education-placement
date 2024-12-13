@@ -8,7 +8,7 @@ import { getConfig } from "./config";
 
 const onRedirectCallback = (appState: any) => {
   createBrowserHistory.push(
-    appState && appState.returnTo ? appState.returnTo : window.location.pathname
+    window.location.pathname+"/dashboard"
   );
 };
 
