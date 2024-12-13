@@ -7,13 +7,13 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import News from "./components/News";
 import Guide from "./components/Guide";
+import SchoolDashboard from "./components/SchoolDashboard";
 import Support from "./components/Support";
 import { useAuth0 } from "@auth0/auth0-react";
-import "./index.css";
 import "./App.css";
 
 const App = () => {
-  const { isLoading, error } = useAuth0();
+  const { isAuthenticated, isLoading, error } = useAuth0();
 
   if (error) {
     return <div>Oops... {error.message}</div>;
@@ -35,6 +35,7 @@ const App = () => {
             <Route path="/guide" element={<Guide/>}/>
             <Route path="/support" element={<Support/>}/>
             <Route path="/profile" element={<Profile/>}/>
+            {isAuthenticated?<Route path="/dashboard" element={<SchoolDashboard/>}/>:null}
         </Routes>
         </Container>
         <Footer />

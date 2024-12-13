@@ -46,6 +46,16 @@ const NavBar = () => {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
+              {isAuthenticated?(<NavItem>
+              <NavLink
+                  tag={RouterNavLink}
+                  to="/dashboard"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  Dashboard
+                </NavLink>
+              </NavItem>):null}
               <NavItem>
               <NavLink
                   tag={RouterNavLink}

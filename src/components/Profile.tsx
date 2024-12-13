@@ -22,7 +22,7 @@ export const ProfileComponent = () => {
         </Col>
       </Row>
       <Row>
-        {JSON.stringify(user, null, 2)}
+        <p className="lead">Datele personale: {JSON.stringify(user)}</p>
       </Row>
     </Container>
   );
