@@ -6,7 +6,7 @@ import { getConfig } from "./config";
 
 
 
-const onRedirectCallback = (appState: any) => {
+const onRedirectCallback = () => {
   createBrowserHistory.push(
     window.location.pathname+"/dashboard"
   );
