@@ -19,7 +19,7 @@ const providerConfig = {
   clientId: config.clientId,
   onRedirectCallback,
   authorizationParams: {
-    redirect_uri: window.location.origin+"/dashboard",
+    redirect_uri: window.location.origin,
     ...(config.audience ? { audience: config.audience } : null),
   },
 };
