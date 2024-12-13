@@ -1,10 +1,7 @@
 
 import logo from "../assets/logo.png";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const Hero = () => {
-
-  const {isAuthenticated} = useAuth0();
 
   return (
   <div className="container col-xxl-8 px-4 py-3">
@@ -14,7 +11,6 @@ const Hero = () => {
       </div>
       <div className="col-lg-5">
         <h1 className="display-6 fw-bold lh-1 mb-3">EduPlacement</h1>
-        {isAuthenticated?<h1 className="display-6 fw-bold lh-1 mb-3"><a href="/dashboard">Aceseaza Dashboard-ul</a></h1>:<p className="lead">Autentifica-te pentru a accesa Dashboard-ul</p>}
         <p className="lead">O platforma menita sincronizarii scolilor si a inspectoratelor scolare pe percursul proiectului de incardare in invatamantul pre-universitar. 
           Scopul acesteia este usurarea si eficientizarea muncii depuse de catre oamenii implicati in acest proiect.</p>
         
