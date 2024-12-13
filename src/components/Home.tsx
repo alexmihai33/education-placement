@@ -11,7 +11,7 @@ const Hero = () => {
         <img src={logo} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="375" loading="lazy"/>
       </div>
       <div className="col-lg-5">
-        <h1 className="display-6 fw-bold lh-1 mb-3">EduTrack</h1>
+        <h1 className="display-6 fw-bold lh-1 mb-3">EduPlacement</h1>
         <p className="lead">O platforma menita sincronizarii scolilor si a inspectoratelor scolare pe percursul proiectului de incardare in invatamantul pre-universitar. 
           Scopul acesteia este usurarea si eficientizarea muncii depuse de catre oamenii implicati in acest proiect.</p>
         
