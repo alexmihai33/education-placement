@@ -6,9 +6,9 @@ import { getConfig } from "./config";
 
 
 
-const onRedirectCallback = () => {
+const onRedirectCallback = (appState: any) => {
   createBrowserHistory.push(
-    window.location.pathname+"/dashboard"
+    appState && appState.returnTo ? appState.returnTo : window.location.pathname
   );
 };
 
@@ -19,7 +19,7 @@ const providerConfig = {
   clientId: config.clientId,
   onRedirectCallback,
   authorizationParams: {
-    redirect_uri: window.location.origin+"/dashboard",
+    redirect_uri: window.location.origin,
     ...(config.audience ? { audience: config.audience } : null),
   },
 };
